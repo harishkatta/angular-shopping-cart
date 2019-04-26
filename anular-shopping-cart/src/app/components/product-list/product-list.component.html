@@ -1,0 +1,21 @@
+<div >
+  <div *ngFor="let p of products" class='product-list'>
+    <div class="flex-container">
+      <img
+        class="img-thumbnail .img-responsive .flex-items"
+        src="{{p.product_img}}"
+        style="height:80px;width:80px;"
+      />
+      <div class="flex-items">
+        <p>Item Code: {{p.product_id}}</p> 
+        <p>Item Name:{{p.product_name}} </p>
+        <p>Price: {{p.product_price}}</p>        
+      </div>
+      <div class="flex-items .flex-container">
+        <!-- <button class="btn btn-primary btn-sm" (click)="view(p)">View</button> &nbsp;    -->
+        <button class="btn btn-primary btn-sm" (click)="addToCart(p)"> Add to Cart</button>        
+      </div>    
+    </div>
+  </div>
+</div>
+
